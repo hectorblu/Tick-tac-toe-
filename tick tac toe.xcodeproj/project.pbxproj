@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		549D8AC81F14037B00DBA495 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549D8AC71F14037B00DBA495 /* GameKit.framework */; };
 		BEAB1DB51F13F3F600920391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAB1DB41F13F3F600920391 /* AppDelegate.swift */; };
 		BEAB1DB71F13F3F600920391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAB1DB61F13F3F600920391 /* ViewController.swift */; };
 		BEAB1DBA1F13F3F600920391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAB1DB81F13F3F600920391 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		549D8AC71F14037B00DBA495 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BEAB1DB11F13F3F600920391 /* tick tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tick tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAB1DB41F13F3F600920391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEAB1DB61F13F3F600920391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549D8AC81F14037B00DBA495 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		549D8AC61F14037B00DBA495 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549D8AC71F14037B00DBA495 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BEAB1DA81F13F3F600920391 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				BEAB1DC81F13F3F600920391 /* tick tac toeTests */,
 				BEAB1DD31F13F3F600920391 /* tick tac toeUITests */,
 				BEAB1DB21F13F3F600920391 /* Products */,
+				549D8AC61F14037B00DBA495 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,8 +205,12 @@
 				TargetAttributes = {
 					BEAB1DB01F13F3F600920391 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UMY3NMJYZY;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					BEAB1DC41F13F3F600920391 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -417,11 +433,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UMY3NMJYZY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "tick tac toe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "solorio.tick-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -430,11 +447,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UMY3NMJYZY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "tick tac toe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "solorio.tick-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -516,6 +534,7 @@
 				BEAB1DDB1F13F3F600920391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEAB1DDC1F13F3F600920391 /* Build configuration list for PBXNativeTarget "tick tac toeTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +543,7 @@
 				BEAB1DDE1F13F3F600920391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEAB1DDF1F13F3F600920391 /* Build configuration list for PBXNativeTarget "tick tac toeUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +552,7 @@
 				BEAB1DE11F13F3F600920391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
